@@ -1,17 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Activity
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+    <ion-item *ngFor="let item of items">
+      {{ item }}
     </ion-item>
   </ion-list>
+  
 </ion-content>
